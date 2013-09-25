@@ -1,4 +1,4 @@
-# print('hello %s!' % name) # remainder
+# print('hello %s!' % name)	// print('hello {0}!'.format("defm03"))
 # webbrowser.open('http://...')
 
 import urllib.request
