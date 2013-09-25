@@ -15,6 +15,14 @@ API_key = "AIzaSyDy2DZ5h77e-NxIX6Zp3UurDYK9mIqn_Pk"
 close_bus_drivers_id = []
 
 
+# prototype for bus list (ex.):
+bus_locs = {
+	'1412': (41.8750332142, -87.6290740967),
+	'1406': (41.8886332873, -87.6295552408),
+	'1780': (41.9097633362, -87.6315689097),
+	# id   - lat          -  lon           #
+}
+
 # NS -- ignore some stuff: approx
 # monitor of distance
 def distance(lat1, lat2):
@@ -31,8 +39,7 @@ def monitor():
 	doc = parse('rt22.xml') 
 
 	for bus in doc.findall('bus'):
-		lat = float(bus.findtext('lat')) 
-		lon = float(bus.findtext('lon'))
+		lat,lon = float(bus.findtext('lat')), float(bus.findtext('lon'))
 		oflat_t_lat = distance(office_lat,lat)
 		if lat <= office_lat and oflat_t_lat <= 3.5:
 			# Search for bus in max distance of 3.5 miles
