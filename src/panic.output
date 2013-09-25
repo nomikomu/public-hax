@@ -1,0 +1,46 @@
+! This is text output.
+! rt22.xml and pics are in data dir.
+
+bus list
+========
+South Bound
+41.873939514160156
+North West Bound
+42.01911163330078
+<alert@> We found bus:  1408 North Bound 41.88690912498618
+North Bound
+41.88690912498618
+South Bound
+42.00388856367631
+<alert@> We found bus:  1782 North Bound 41.898310227827594
+North Bound
+41.898310227827594
+South Bound
+41.98304587144118
+South Bound
+41.98156049358311
+<alert@> We found bus:  1419 North Bound 41.92538287592869
+North Bound
+41.92538287592869
+<alert@> We found bus:  4179 North West Bound 41.93696680608785
+North West Bound
+41.93696680608785
+South East Bound
+41.938429151262554
+South East Bound
+41.92544068230523
+<alert@> We found bus:  1393 North Bound 41.96948524923886
+North Bound
+41.96948524923886
+South East Bound
+41.91829045613607
+<alert@> We found bus:  1765 North Bound 41.97812360525131
+North Bound
+41.97812360525131
+<alert@> We found bus:  1905 North Bound 41.97934420355435
+North Bound
+41.97934420355435
+North Bound
+42.005971908569336
+South Bound
+41.87865992954799
