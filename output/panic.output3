@@ -1,0 +1,30 @@
+! This is text output.
+! 3_rt22.xml and pics are in data dir.
+
+bus list
+========
+We found bus:  1859 North Bound
+====>  1859   0.30964082111813696  miles
+====>  lat:  41.975774451867856  lon:  -87.66838073730469
+We found bus:  1762 North Bound
+====>  1762   0.29369476025413377  miles
+====>  lat:  41.97600555419922  lon:  -87.66837968497441
+We found bus:  1426 North Bound
+====>  1426   0.20275954907237548  miles
+====>  lat:  41.97732345581055  lon:  -87.66838012695312
+--------
+bus list
+========
+We found bus:  1909 North Bound
+====>  1909   0.9506377000123365  miles
+====>  lat:  41.96648464202881  lon:  -87.6670150756836
+We found bus:  1762 North Bound
+====>  1762   0.2790391971873305  miles
+====>  lat:  41.976217953663955  lon:  -87.66837699458284
+We found bus:  1859 North Bound
+====>  1859   0.27487495129417283  miles
+====>  lat:  41.97627830505371  lon:  -87.66838073730469
+We found bus:  1426 North Bound
+====>  1426   0.03993755592600934  miles
+====>  lat:  41.979683194841655  lon:  -87.6683156149728
+--------

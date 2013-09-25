@@ -32,24 +32,26 @@ def monitor():
 
 	for bus in doc.findall('bus'):
 		lat = float(bus.findtext('lat')) 
-		if lat <= office_lat:
+		lon = float(bus.findtext('lon'))
+		oflat_t_lat = distance(office_lat,lat)
+		if lat <= office_lat and oflat_t_lat <= 3.5:
+			# Search for bus in max distance of 3.5 miles
 			id_of_bus = bus.findtext('id')
 			direction_of_bus = bus.findtext('d')
-			if direction_of_bus.startswith('North'):
-				print("<alert@> We found bus: ", id_of_bus, direction_of_bus, lat)
+			if direction_of_bus.startswith('North Bound'):
+				print("We found bus: ", id_of_bus, direction_of_bus)
 				close_bus_drivers_id.append(id_of_bus)
 
 				if ' ' in direction_of_bus:
 					direction_of_bus.replace(' ', '+')
 
-				lon = bus.findtext('lon')
-
 				# Open browser with google static map API
 				webbrowser.open('http://maps.googleapis.com/maps/api/staticmap?center={0},Chicago'.format(direction_of_bus)+
-								'&zoom=13&size=800x800&maptype=roadmap&markers=color:red%7Clabel:S%7C{0},{1}'.format(lat, lon)+
+								'&zoom=11&size=800x800&maptype=roadmap&markers=color:red%7Clabel:S%7C{0},{1}'.format(lat, lon)+
 								'&sensor=false&key={0}'.format(API_key))
 
-				print(id_of_bus, " ", distance(office_lat,lat), " miles")
+				print("====> ", id_of_bus, " ", distance(office_lat,lat), " miles")
+				print("====> ", "lat: ", lat, " lon: ", lon)
 		#d = bus.findtext('d') # direction of a bus
 		#print(d)
 		#lat = float(bus.findtext('lat')) # to float
