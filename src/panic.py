@@ -1,11 +1,11 @@
-# print('hello %s!' % name)	// print('hello {0}!'.format("defm03"))
+# print('hello %s!' % name) // print('hello {0}!'.format("defm03"))
 # webbrowser.open('http://...')
 #
 # defm03 - Kamil Żak (defm03@outlook.jp)
 
 import urllib.request
 import webbrowser
-from xml.etree.ElementTree import parse
+import xml.etree.ElementTree as eltree
 import time
 
 office_lat = 41.980262 	
@@ -36,7 +36,8 @@ def monitor():
 	f = open('rt22.xml','wb')
 	f.write(data) # writes all from data to rt22.xml file
 
-	doc = parse('rt22.xml') 
+	doc = eltree.parse('rt22.xml') 
+	root = doc.getroot()
 
 	for bus in doc.findall('bus'):
 		lat,lon = float(bus.findtext('lat')), float(bus.findtext('lon'))
